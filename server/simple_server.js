@@ -9,12 +9,13 @@ function router(req, res, url) {
     if (type == 'json' || type == 'js' || type == 'css' || type == 'html') {
         contentType = `text/${type}`
     }
+    // webpack打包的资源无法获取，路径不匹配。需要再加个dist
     if (type == 'gif' || type == 'jpg' || type == 'jpeg' || type == 'png') {
         contentType = `image/${type}`
     }
     res.writeHead(200, { 'Content-Type': contentType })
-
-    fs.readFile(process.cwd() + url, (err, data) => {
+    console.log('...>>>', url)
+    fs.readFile(path.resolve(process.cwd() + url), (err, data) => {
         res.end(data)
         return
     })

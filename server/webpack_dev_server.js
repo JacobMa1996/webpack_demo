@@ -4,7 +4,7 @@ const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 const detect = require('detect-port')
 // const load = require('loading-cli')
-const webpackConfig = require('../webpack.config')
+const webpackConfig = require('../webpack/dev_config')
 const open = require('open')
 
 let port = 2019
