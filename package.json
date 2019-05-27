@@ -4,7 +4,8 @@
   "description": "webpack demo",
   "main": "index.js",
   "scripts": {
-    "start": "node ./server",
+    "simple": "node ./server/simple_server",
+    "webpack-simple": "node ./server/webpack_simple_server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,9 +26,15 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "detect-port": "^1.3.0",
     "open": "^6.3.0",
     "opn": "^6.0.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "webpack": "^4.32.2",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.2"
   }
 }
